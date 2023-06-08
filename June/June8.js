@@ -26,5 +26,40 @@ const confirmSortedArray = (array) => {
 }
 
 
-Write a multiplication function without using the * operation. Determine what arguments you think this function will accept. The return of the function should be the product of the function
+// Write a multiplication function without using the * operation. Determine what arguments you think this function will accept. 
+//The return of the function should be the product of the function
+
+//SUDO
+const multiply = (a, b) => {
+    let answer = 0
+
+    for(let i = 0; i < b; i++) {
+        if(b === 0){
+            answer = 0
+        } else if(a < 0 || b < 0){
+            answer -= a
+        } else {
+            answer += a
+        }
+    }
+    return answer
+}
+
+//SOLUTION = missing Math.abs() function
+//This function returns the absolute value of a number. This will handle if 'a' or 'b' are negative
+
+const multiply = (a, b) => {
+    let answer = 0
+
+    for(let i = 0; i < Math.abs(b); i++){
+        if(a < 0 || b < 0 ){
+            answer -= a
+        } else {
+            answer += a
+        }
+    }
+    return answer
+}
+
+
 Given a string representing a paragraph, write a function to return the frequency of each word in the paragraph
