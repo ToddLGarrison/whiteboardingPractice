@@ -62,4 +62,34 @@ const multiply = (a, b) => {
 }
 
 
-Given a string representing a paragraph, write a function to return the frequency of each word in the paragraph
+// Given a string representing a paragraph, 
+// write a function to return the frequency of each word in the paragraph
+
+//SUDO
+let paragraph = "So we shall let the reader answer this question for himself: who is the happier man, he who has braved the storm of life and lived or he who has stayed securely on shore and merely existed?"
+
+const countWord = (string) => {
+    let numberOfTimes = []
+    let words = string.split(" ")
+
+    for(let i = 0; i < words.length; i++){
+
+    }
+    return numberOfTimes
+}
+
+//SOLUTION
+
+
+const countWord = (string) => {
+    let words = string.split(" ")
+    let wordMap = {}
+
+    for(let i = 0; i < words.length; i++){
+        let currentWordCount = wordMap[words[i]]
+        let count = currentWordCount ? currentWordCount : 0
+        wordMap[words[i]] = count + 1
+    }
+
+    return wordMap
+}
