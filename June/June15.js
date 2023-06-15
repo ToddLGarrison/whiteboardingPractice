@@ -21,7 +21,8 @@ const mostFrequent = (array) => {
 }
 
 
-//Given a string, write a function that removes duplicate characters in the string keeping only the first occurrences. For example, if the input is tree traversal, the output will be “tre avsl”
+//Given a string, write a function that removes duplicate characters in the string keeping only the first occurrences. 
+//For example, if the input is tree traversal, the output will be “tre avsl”
 
 //SOlution
 
@@ -44,4 +45,21 @@ const removeDups = (string) => {
     return result
 }
 
-Write a function that takes two strings as arguments and returns a string containing only the characters found in both strings
+//Write a function that takes two strings as arguments and returns a string containing only the characters 
+//found in both strings
+
+const findDups = (stringA, stringB) => {
+    let duplicateLetters = []
+
+    const setOne = new Set(stringA.split(''))
+    const setTwo = new Set(stringB.split(''))
+
+    for(let character of setOne.values()){
+        if(setTwo.has(character)){
+            duplicateLetters.push(character)
+        }
+    }
+
+    return duplicateLetters
+}
+
