@@ -48,7 +48,7 @@ const map = (array, fn) => {
 
 //SOLUTION
 
-const map = (array, fn) => {
+const map1 = (array, fn) => {
     let mappedArray = []
     for(let i = 0; i < array.length; i++) {
         mappedArray.push(fn(array[i], i))
