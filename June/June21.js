@@ -6,7 +6,7 @@
 const phrase = "Hello World"
 
 const lastWordLength = (string) => {
-    let splitPhrase = string.split(" ")
+    let splitPhrase = string.trim().split(" ")
     let lastWord = splitPhrase[splitPhrase.length - 1]
 
     let lastWordLetterCount = lastWord.length
