@@ -15,3 +15,24 @@
 const toCamelCase = (str) => {
     return str.replace(/[-_](.)/g, (_, letter) => letter.toUpperCase())
     }
+
+// A pangram is a sentence that contains every single letter of the alphabet 
+// at least once. For example, the sentence 
+// "The quick brown fox jumps over the lazy dog" 
+// is a pangram, because it uses the letters A-Z at least once (case is irrelevant).
+
+// Given a string, detect whether or not it is a pangram. 
+// Return True if it is, False if not. Ignore numbers and punctuation.
+
+const isPangram = (string) => {
+    let alphabetSet = new Set('abcdefghijklmnopqrstuvwxyz')
+    let lowerCaseString = string.toLowerCase().replace(/[^a-z]/g, '')
+
+    for (const character of lowerCaseString) {
+        alphabetSet.delete(character);
+        if(alphabetSet.size === 0 ){
+            return true
+        }
+    }
+    return false
+}
