@@ -16,3 +16,27 @@ function maxPair(arr) {
 
     return maxIndices;
 }
+
+
+// Your task is to write a function maskify, which changes all but the last four characters into '#'.
+
+// Examples
+// maskify("4556364607935616") == "############5616"
+// maskify(     "64607935616") ==      "#######5616"
+// maskify(               "1") ==                "1"
+// maskify(                "") ==                 ""
+
+// // "What was the name of your first pet?"
+// maskify("Skippy")                                   == "##ippy"
+// maskify("Nananananananananananananananana Batman!") == "####################################man!"
+
+
+const maskify = (cc) => {
+    if (cc.length > 4){
+        const lastFourNums = cc.slice(-4);
+        const maskedNumber = '#'.repeat(cc.length - 4) + lastFourNums
+        return maskedNumber
+    } else {
+        return cc
+    }
+}
