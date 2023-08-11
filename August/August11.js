@@ -1,7 +1,6 @@
 //Move the first letter of each word to the end of it, 
 //then add "ay" to the end of the word. Leave punctuation marks untouched.
 
-function pigIt(str){
     //spilt on " "
     //for loop 
     //pop 
@@ -9,12 +8,21 @@ function pigIt(str){
     //add 'ay' to the end of the word
     //add to empty const
 
-        let pigLatin = []
+function pigIt(str){
+    const splitWords = str.split(" ")
+    const pigLatinPhrase = []
 
-        let splitWord = str.split(" ")
-        for(let i=0; i<str.length; i++){
 
+    for(const word of splitWords){
+        const firstLetter = word[0]
+        const restOfWord = word.slice(1)
+
+        if (/[a-zA-Z]/.test(firstLetter)){
+            const pigLatinWord = restOfWord + firstLetter + "ay"
+            pigLatinPhrase.push(pigLatinWord)
+        } else {
+            pigLatinPhrase.push(word)
         }
-
-        return pigLatin
     }
+    return pigLatinPhrase.join(" ")
+}
