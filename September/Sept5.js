@@ -48,8 +48,7 @@ const countSmileys = (array) => {
         return 0;  
     }
         
-
-    let pattern = /[:;][-~]?[)D]/
+    let pattern = /[;:][-~]?[)D]/
 
     let count = 0;
 
