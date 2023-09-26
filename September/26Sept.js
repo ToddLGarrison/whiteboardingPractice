@@ -60,3 +60,30 @@ function zeros (n) {
 
     return count
 }
+
+// Given a string with the weights of FFC members in normal order can you give this string ordered 
+//by "weights" of these numbers?
+
+// Example:
+// "56 65 74 100 99 68 86 180 90" ordered by numbers weights becomes: 
+
+// "100 180 90 56 65 74 68 86 99"
+
+//Solution
+
+function orderWeight(string) {
+    const weightArray = string.split(' ')
+
+    function customSort(a, b) {
+        const sumA = a.split('').reduce((acc, digit) => acc + parseInt(digit), 0)
+        const sumB = b.split('').reduce((acc, digit) => acc + parseInt(digit), 0)
+
+        if (sumA === sumB){
+            return a.localeCompare(b)
+        }
+        return sumA - sumB
+    }
+
+    sortedWeights = weightArray.sort(customSort)
+    return sortedWeights.join(' ')
+}
