@@ -45,3 +45,18 @@ function toWeirdCase(string){
 
     return weirdString.join(' ')
 }
+
+
+// Write a program that will calculate the number of trailing zeros in a factorial of a given number.
+
+function zeros (n) {
+    let count = 0
+    let dividend = n
+
+    while (dividend > 0){
+        dividend = Math.floor(dividend / 5)
+        count += dividend
+    }
+
+    return count
+}
