@@ -79,3 +79,13 @@ function timeConversion(s) {
 
     return `${hours}:${minutes}:${seconds}`
 }
+
+// Given an integer x, return true if x is a palindrome, and false otherwise.
+
+const isPalindrome = (x) => {
+    const string = x.toString()
+
+    const reverseString = string.split('').reverse().join('')
+
+    return string === reverseString
+}
