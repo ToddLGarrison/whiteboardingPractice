@@ -58,7 +58,24 @@ function miniMaxSum(arr) {
     let topSum = topFour.reduce((acc, i) => acc + i, 0)
     let bottomSum = bottomFour.reduce((acc, i) => acc + i, 0)
 
-    console.log(topSum)
-    console.log(bottomSum)
+    console.log(bottomSum, topSum)
+}
 
+//Given a time in -hour AM/PM format, convert it to military (24-hour) time.
+
+// Note: - 12:00:00AM on a 12-hour clock is 00:00:00 on a 24-hour clock.
+// - 12:00:00PM on a 12-hour clock is 12:00:00 on a 24-hour clock.
+
+function timeConversion(s) {
+    let period = s.slice(-2)
+
+    let [hours, minutes, seconds] = s.slice(0, -2).split(':')
+
+    if (period === 'AM' && hours === '12'){
+        hours = '00'
+    } else if (period === 'PM' & hours !== '12') {
+        hours = (parseInt(hours, 10) + 12).toString()
+    }
+
+    return `${hours}:${minutes}:${seconds}`
 }
