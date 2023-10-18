@@ -47,3 +47,18 @@ function plusMinus(arr) {
     console.log(negativeRatio.toFixed(6))
     console.log(zeroRatio.toFixed(6))
 }
+
+// Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers. Then print the respective minimum and maximum values as a single line of two space-separated long integers.
+
+function miniMaxSum(arr) {
+    // Write your code here
+    let topFour = arr.sort((a, b) => b - a).slice(0,4)
+    let bottomFour = arr.sort((a, b) => a - b).slice(0,4)
+
+    let topSum = topFour.reduce((acc, i) => acc + i, 0)
+    let bottomSum = bottomFour.reduce((acc, i) => acc + i, 0)
+
+    console.log(topSum)
+    console.log(bottomSum)
+
+}
