@@ -35,3 +35,54 @@ function multiplicationTable(n) {
         console.log(row);
     }
 }
+
+//registration form using react to check username
+
+import React, { useState, useEffect } from 'react';
+
+const RegistrationForm = ({ apiEndpoint, validationFunction }) => {
+    const [username, setUsername] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
+
+    useEffect(() => {
+        const checkUsername = async () => {
+        if (username.length >= 4) {
+            try {
+            const response = await fetch(`${apiEndpoint}?username=${username}`);
+            const data = await response.json();
+
+            const isValidUsername = validationFunction(data);
+
+            if (!isValidUsername) {
+                setErrorMessage('Invalid Username');
+            } else {
+                setErrorMessage('');
+            }
+            } catch (error) {
+            console.error('Error checking Username:', error);
+            setErrorMessage('Error checking Username');
+            }
+        } else {
+            setErrorMessage('Username must be at least 4 characters long');
+        }
+        };
+
+        checkUsername();
+    }, [username, apiEndpoint, validationFunction]);
+
+    return (
+        <>
+        <label>
+            Username:
+            <input
+            type='text'
+            value={username}
+            onChange={(event) => setUsername(event.target.value)}
+            />
+        </label>
+        {errorMessage && <p>{errorMessage}</p>}
+        </>
+    );
+};
+
+export default RegistrationForm;
