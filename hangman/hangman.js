@@ -6,6 +6,17 @@ let splitWord = word.split('')
 let guessedWord = Array(splitWord.length).fill('_')
 let incorrectGuess = 0
 
-function displayWord = () {
-
+function displayWord() {
+    console.log('Word: ', guessedWord)
+    console.log('Incorrect guesses: ', incorrectGuess)
 }
+
+function checkGuess() {
+
+    const guessPrompt = readLineSync.keyIn('Please guess a single lowercase letter: ', { limit: 'abcdefghijklmnopqrstuvwxyz' }).toLocaleLowerCase()
+
+    
+}
+
+displayWord()
+checkGuess()
