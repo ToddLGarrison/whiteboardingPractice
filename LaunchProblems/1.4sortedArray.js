@@ -8,8 +8,8 @@ const sortedArray = (array) => {
     let sortedNumbers = [...array]
 
     for (let i = 0; i < sortedNumbers.length; i++) {
-        for(let j = 0; j < sortedNumbers.length - i; j++) { 
-            if (sortedNumbers[j] < sortedNumbers[j + 1]) {
+        for(let j = 0; j < sortedNumbers.length - i - 1; j++) { 
+            if (sortedNumbers[j] > sortedNumbers[j + 1]) {
                 const placeHolder = sortedNumbers[j]
                 sortedNumbers[j] = sortedNumbers[j + 1]
                 sortedNumbers[j + 1] = placeHolder
