@@ -13,9 +13,29 @@ function displayWord() {
 
 function checkGuess() {
 
-    const guessPrompt = readLineSync.keyIn('Please guess a single lowercase letter: ', { limit: 'abcdefghijklmnopqrstuvwxyz' }).toLocaleLowerCase()
+    const playerGuess = readLineSync.keyIn('Please guess a single lowercase letter: ', { limit: 'abcdefghijklmnopqrstuvwxyz' }).toLocaleLowerCase()
 
-    
+    if (splitWord.includes(playerGuess)) {
+        for (let i = 0; i < splitWord.length; i++) {
+            if (splitWord[i] === playerGuess) {
+                guessedWord[i] = playerGuess
+            }
+        }
+    } else {
+        incorrectGuess++;
+    }
+
+    if (guessedWord.join('') === word) {
+        console.log('Congratulations! You guessed the correct word', word)
+        return
+    } else {
+        displayWord()
+    }
+
+    if (incorrectGuess >= 6) {
+        console.log('Too many incorrect guesses, you lose. The correct word was: ', word)
+        return
+    }
 
     checkGuess()
 }
