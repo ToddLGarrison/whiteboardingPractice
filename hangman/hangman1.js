@@ -35,7 +35,7 @@ function checkGuess() {
             displayWord()
         }
 
-        if (incorrectGuessCount > 6){
+        if (incorrectGuessCount >= 6){
             console.log('You lose. Too many incorrect guesses')
             return
         }
