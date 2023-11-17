@@ -10,7 +10,7 @@ let incorrectLetters = []
 function displayWord() {
     console.log('Word: ', guessedWord.join(' '))
     console.log('Incorrect guess count: ', incorrectGuessCount)
-    console.log('Remaining guesses: ', (6 - incorrectGuessCount))
+    console.log('Remaining incorrect guesses: ', (6 - incorrectGuessCount))
 }
 
 function checkGuess() {
