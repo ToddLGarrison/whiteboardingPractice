@@ -16,6 +16,8 @@ function checkGuess() {
     const guessPrompt = readLineSync.keyIn('Please guess a single lowercase letter: ', { limit: 'abcdefghijklmnopqrstuvwxyz' }).toLocaleLowerCase()
 
     
+
+    checkGuess()
 }
 
 displayWord()
