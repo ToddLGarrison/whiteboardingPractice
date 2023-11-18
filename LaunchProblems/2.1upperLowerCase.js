@@ -13,7 +13,7 @@ const changeCase = (string) => {
             reverseCase += string[i].toLowerCase()
         }
     }
-
+    console.log(reverseCase)
     return reverseCase
 }
 
