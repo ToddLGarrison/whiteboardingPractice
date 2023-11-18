@@ -5,9 +5,9 @@ const arrayEven = [2, 4, 6, 8]
 const arrayBoth = [1, 3, 6, 8]
 
 const areEven = (array) = () => {
-    array.every(function(number){
+    return array.every(function(number){
         return number % 2 === 0
-    } )
+    })
 }
 
 areEven(arrayEven)
