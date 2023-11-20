@@ -1,4 +1,4 @@
-//linearSearch input is the array you want to search and the target of the search
+//linearSearch input is an array you want to search and the target of the search
 
 function linearSearch(arr, target) {
     for (let i = 0; i < arr.length; i++) {
