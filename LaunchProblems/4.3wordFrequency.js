@@ -5,7 +5,7 @@ const string = 'One time I went to this one place and then that time I met that 
 const wordFrequency = (string) => {
     let wordCount = {}
 
-    let splitString = string.split(' ')
+    let splitString = string.toLowerCase().split(' ')
 
     for (let i = 0; i < splitString.length; i++) {
         //push word and count to wordCount object to create key value pairs
