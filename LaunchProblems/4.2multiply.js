@@ -9,7 +9,7 @@ const multiplication = (number1, number2) => {
     let total = 0
 
     for (let i = 0; i < number2; i++) {
-        total = total + number1
+        total += number1
     }
 
     return total
