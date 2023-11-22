@@ -3,3 +3,14 @@
 // For example, in the word "bee", "b" can be found at index 0, and "e" can be found at index 1 & 2
 
 const string = 'carrot'
+
+const letterLocation = (string) => {
+    let letterHash = {}
+
+    for (const letter of string) {
+        letterHash[letter] = string.indexOf(letter)
+    }
+    return letterHash
+}
+
+console.log(letterLocation(string))
