@@ -6,10 +6,10 @@ const moreThanOnce = (array) => {
     let multiNumbers = []
 
     for (let i = 0; i < array.length; i++) {
-        for (let j = 0; j < array[i].length; j++) {
+        for (let j = 0; j < array.length; j++) {
             if (i !== j && array[i] === array[j]) {
                 multiNumbers.push(array[i])
-                return
+                break
             }
         }
     }
