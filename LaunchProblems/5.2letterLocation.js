@@ -7,9 +7,16 @@ const string = 'carrot'
 const letterLocation = (string) => {
     let letterHash = {}
 
-    for (const letter of string) {
-        letterHash[letter] = string.indexOf(letter)
+    for (let i = 0; i < string.length; i++) {
+        const letter = string[i]
+
+        if (letterHash[letter]) {
+            letterHash[letter].push(i)
+        } else {
+            letterHash[letter] = [i]
+        }
     }
+
     return letterHash
 }
 
