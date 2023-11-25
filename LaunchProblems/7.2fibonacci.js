@@ -4,7 +4,9 @@ const fibonacci = (integer) => {
     let sequence = [0, 1]
 
     for (let i = 2; i <= integer; i++) {
-        sequence.push((sequence[0] + sequence[1]))
+        let nextNumber = sequence[sequence.length - 2] + sequence[sequence.length - 1]
+
+        sequence.push(nextNumber)
     }
 
     return sequence
