@@ -3,7 +3,7 @@
 const fibonacci = (integer) => {
     let sequence = [0, 1]
 
-    for (let i = 0; i <= integer; i++) {
+    for (let i = 2; i <= integer; i++) {
         sequence.push((sequence[0] + sequence[1]))
     }
 
