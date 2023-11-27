@@ -6,3 +6,14 @@
 // If the length of the array is 0, it should return init.
 
 // Please solve it without using the built-in Array.reduce method.
+
+
+const numberArray = [1, 2, 3, 4, 5, 6, 7, 8]
+
+var reduce = function(nums, fn, init) {
+    let val = init;
+    for (let i = 0; i < nums.length; i++) {
+    val = fn(val, nums[i]);
+    }
+    return val;
+};
