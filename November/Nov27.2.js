@@ -13,7 +13,9 @@ var filter = function(arr, fn) {
     let filteredArray = []
 
     for (let i = 0; i < arr.length; i++) {
-        if (fn(arr[i], i)) {
+        if (fn.length === 1 && fn(arr[i])) {
+            filteredArray.push(arr[i])
+        } else if (fn.length === 2 && fn(arr[i], i)) {
             filteredArray.push(arr[i])
         }
     }
