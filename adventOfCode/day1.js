@@ -1,15 +1,22 @@
+import calibrationDocument from "./calibrationDocument"
+
 const adventDayOne = (array) => {
-    let doubleDigits = 0
+    let sumOfCalibration = 0
 
     for (let i = 0; i < array.length; i++) {
-        let firstNumber = null
-        let secondNumber = null
+        let line = array[i]
 
+        for (let j = 0; j < line.length; j++) {
+            let onlyNumbers = line.match(/\d+/g)
+            let firstNumber = onlyNumbers[0]
+            let lastNumber = onlyNumbers[onlyNumbers.length - 1]
+
+            let twoDigitNumber = parseInt(firstNumber + lastNumber)
+            sumOfCalibration += twoDigitNumber
+        }
 
     }
-
-    
-    return 
+    return  sumOfCalibration
 }
 
-console.log(adventDayOne(dataSet))
+console.log(adventDayOne(calibrationDocument))
