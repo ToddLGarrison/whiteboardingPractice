@@ -10,7 +10,6 @@ let splitWord = word.split('')
 let guessWord = Array(splitWord.length).fill('_')
 
 //create trackers
-let guessCounter = 0
 let incorrectCounter = 0
 let maxIncorrectGuess = 6
 let incorrectLetters = []
@@ -22,6 +21,7 @@ const displayResults = () => {
     console.log('Word ', guessWord.join(' '))
     console.log('Number of incorrect guesses: ', incorrectCounter)
     console.log('Number of guesses remaining:', maxIncorrectGuess - incorrectCounter)
+    console.log('Incorrect letters: ', incorrectLetters)
 }
 
 //create game
@@ -48,6 +48,8 @@ const hangmanGame = () => {
     if(guessWord.join('') === word) {
         console.log('You sexy animal! You won!', word)
         return
+    } else {
+        displayResults()
     }
 
     //handle losing
