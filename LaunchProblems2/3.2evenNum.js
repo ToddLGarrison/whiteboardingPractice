@@ -4,3 +4,11 @@
 const arrayEven = [2, 4, 6, 8]
 const arrayBoth = [1, 3, 6, 8]
 
+const isItEven = (array) => {
+    return array.every((number) => {
+        return number % 2 === 0
+    })
+}
+
+console.log('Test 1:', isItEven(arrayEven));
+console.log('Test 2:', isItEven(arrayBoth));
