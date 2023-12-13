@@ -5,7 +5,7 @@ const arrayEven = [2, 4, 6, 8]
 const arrayBoth = [1, 3, 6, 8]
 
 const areEven = (array) => {
-    return array.every(function(number){
+    return array.every((number) => {
         return number % 2 === 0
     })
 }
