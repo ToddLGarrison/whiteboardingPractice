@@ -3,7 +3,7 @@
 string = 'vegetable are great for your digestion'
 
 function removeVowels(word) {
-
+    return word.replace(/[aeuio]/g, "")
 }
 
 console.log('test: ', removeVowels(string));
