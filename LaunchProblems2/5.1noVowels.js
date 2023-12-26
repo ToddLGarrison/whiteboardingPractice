@@ -3,16 +3,7 @@
 word = 'vegetable'
 
 let removeVowels = (string) => {
-    let noVowels = ''
-    let splitWord = string.split('')
-
-    for(let i = 0; i < splitWord.length; i++) {
-        
-    }
-
-    noVowels.join('')
-
-    return noVowels
+    return string.replace(/[aeiou]/g, "")
 }
 
 console.log('test: ', removeVowels(word))
