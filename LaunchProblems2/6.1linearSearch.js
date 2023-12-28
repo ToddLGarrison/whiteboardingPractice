@@ -3,11 +3,11 @@
 const linearSearch = (input, target) => {
     for (let i = 0; i < input.length; i++) {
         if (input[i] === target) {
-            return true;
+            return i;
         }
     }
 
-    return false;
+    return -1;
 };
 
 
