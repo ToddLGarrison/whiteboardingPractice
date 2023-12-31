@@ -11,4 +11,4 @@ function fibonacciSequence(x) {
 }
 
 
-console.log('Test: ', fibonacciSequence(10))
+console.log('Test: ', fibonacciSequence(20))
