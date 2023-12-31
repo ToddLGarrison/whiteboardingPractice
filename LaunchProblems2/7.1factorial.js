@@ -3,9 +3,9 @@
 function createFactorial(x) {
     let total = 1
 
-    for(let i = 0; i <= x.length; i++) {
+    for(let i = 1; i <= x; i++) {
     
-            total * 1
+            total *= i
         
     }
 
