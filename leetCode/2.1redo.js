@@ -1,5 +1,25 @@
 function majorityElement(array) {
+    let countMap = {}
+    let majorityElement = null
+    let maxCount = 0
 
+    for(const num of array) {
+        if (countMap[num]) {
+            countMap[num]++
+        } else {
+            countMap[num] = 1
+        }
+    }
+
+    for (const num in countMap) {
+        if(countMap[num] > maxCount) {
+            majorityElement = num
+            maxCount = countMap[num]
+        }
+    }
+
+    console.log(countMap)
+    return majorityElement
 }
 
 
