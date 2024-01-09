@@ -19,7 +19,7 @@ function majorityElement (nums) {
         }
     }
 
-    return countMap
+    return majorityElement
 }
 
 let array = [2,2,1,1,1,2,2]
