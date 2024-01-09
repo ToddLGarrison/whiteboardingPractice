@@ -9,8 +9,8 @@ function majorityElement (nums) {
         }
     }
 
-    let majorityElement = nums[0]
-    let maxCount = countMap[nums[0]]
+    let majorityElement = null
+    let maxCount = 0
 
     for (const num in countMap) {
         if(countMap[num] > maxCount) {
