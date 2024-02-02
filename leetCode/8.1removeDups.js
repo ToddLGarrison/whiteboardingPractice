@@ -12,7 +12,7 @@ var removeDuplicates = function(nums) {
         }
     }
 
-    return i + 1
+    return ++i
 }
 
 console.log('test: ', removeDuplicates([1,1,2]))
