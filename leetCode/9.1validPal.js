@@ -3,7 +3,9 @@ var isPalindrome = function(s) {
         return true;
     }
 
-    return s.toLowerCase().replace(/[^a-z]/g, '') === s.toLowerCase().replace(/[^a-z]/g, '').split('').reverse().join('')
+    let cleanString = s.toLowerCase().replace(/[^a-z0-9]/g, '')
+
+    return cleanString === cleanString.split('').reverse().join('')
 };
 
 console.log(isPalindrome("A man, a plan, a canal: Panama"))
