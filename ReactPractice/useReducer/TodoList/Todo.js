@@ -1,10 +1,34 @@
+import { text } from 'express';
 import { useReducer } from 'react';
 import AddTask from './AddTask.js';
 import TaskList from './TaskList.js';
+import taskReducer from './tasksReducer.js';
 
 export default function TaskApp() {
+    const [tasks, dispatch] = useReducer(taskReducer, initialTasks);
 
+    function handleAddTask(task) {
+        dispatch({
+            type: 'added',
+            id: nextId++,
+            text: text,
+        })
+    }
 
+    function handleChangeTask(task) {
+        dispatch({
+            type: 'changed',
+            task: task,
+        })
+    }
+
+    function handleDeleteTask(task) {
+        dispatch({
+            type: 'deleted',
+            id: task.id,
+        })
+    }
+    
     return (
         <>
             <h1>Prague itinerary</h1>
