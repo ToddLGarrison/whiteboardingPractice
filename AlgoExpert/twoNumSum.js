@@ -14,11 +14,12 @@
 
 
 function twoNumSum(array, targetSum) {
-    array.sort((a,b) => {a - b});
+    array.sort((a,b) => a - b);
     let left = 0;
     let right = array.length - 1;
 
     while (left < right) {
+        console.log(array[left], array[right])
         const currentSum = array[left] + array [right]; 
 
         if (currentSum === targetSum) {
@@ -33,8 +34,8 @@ function twoNumSum(array, targetSum) {
     return []
 }
 
-let array = [3, 5, -4, 8, 11, 1, -1, 6]
-let targetSum = 10
+let array = [-21, 301, 12, 4, 65, 56, 210, 356, 9, -47]
+let targetSum = 163
 
 console.log(twoNumSum(array, targetSum))
 
