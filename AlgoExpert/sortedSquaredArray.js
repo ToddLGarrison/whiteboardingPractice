@@ -17,16 +17,16 @@ function sortedSquaredArray(array) {
     let smallerValueIndex = 0;
     let largerValueIndex = array.length - 1;
 
-    for (let i = 0; i < array.length; i++) {
+    for (let i = array.length - 1; i >= 0; i--) {
         const smallerValue = array[smallerValueIndex]
         const largerValue = array[largerValueIndex]
 
         if (Math.abs(smallerValue) > Math.abs(largerValue)) {
             squaredArray[i] = smallerValue * smallerValue
-            smallerValue++
+            smallerValueIndex++
         } else {
             squaredArray[i] = largerValue * largerValue
-            largerValue--
+            largerValueIndex--
         }
     }
 
