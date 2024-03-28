@@ -12,11 +12,10 @@ function transposeMatrix(matrix) {
     return transposedMatrix;
 }
 
-let matrix = {
-    "matrix": [
+let matrix = [
         [1, 4],
         [2, 5],
         [3, 6]
     ]
-}
+
 console.log(transposeMatrix(matrix))
