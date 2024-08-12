@@ -11,7 +11,12 @@ class Node {
 
     depthFirstSearch(array) {
     // Write your code here.
-    
+        array.push(this.name)
+
+        for(let child of this.children) {
+            child.depthFirstSearch(array)
+        }
+        return array
     }
 }
 
